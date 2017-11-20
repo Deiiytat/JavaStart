@@ -1,0 +1,20 @@
+
+import java.util.Scanner;
+public class FactorialCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int numfact = scanner.nextInt();
+        scanner.close();
+        long factorial = 1;
+
+        if (numfact < 1 && numfact < 20) {
+            throw new IllegalArgumentException("Number must be from 1 to 20");
+        }else{
+            for (int ckancenum = 1; ckancenum <= numfact; ckancenum++) {
+                factorial *= ckancenum;
+                System.out.println(factorial);
+            }
+        }
+    }
+}
