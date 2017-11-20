@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class EvensRangePrinter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(" Enter first number: ");
+        int firstnumber = scanner.nextInt();
+        System.out.println("Enter second number: ");
+        int secondnumber = scanner.nextInt();
+        scanner.close();
+
+        if (firstnumber % 2 != 0) {
+            firstnumber++;
+        }
+        if (firstnumber < secondnumber) {
+            for (int numplus = firstnumber; numplus < secondnumber; numplus += firstnumber)
+                System.out.print(numplus);
+        }
+    }
+}
