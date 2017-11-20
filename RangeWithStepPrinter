@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class RangeWithStepPrinter {
+    public static void main(String[] args) throws IllegalAccessException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter firs namber: ");
+        int firstnumber = scanner.nextInt();
+        System.out.println("Enter second number:");
+        int seconnumber = scanner.nextInt();
+        System.out.println("Enter step: ");
+        int step = scanner.nextInt();
+        scanner.close();
+
+
+        if (firstnumber < seconnumber && step > 0) {
+            for (int numberplus = firstnumber; numberplus < seconnumber; numberplus += step)
+                System.out.println(numberplus);
+        } else if (seconnumber < firstnumber) {
+            for ( int numberminus = firstnumber; numberminus>seconnumber; numberminus += step)
+            System.out.println(numberminus);
+        } else {
+            throw new IllegalAccessException("Incorrectly entered step");
+        }
+    }
+}
